@@ -1,0 +1,32 @@
+header {
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 4%;
+  box-shadow: 0 0 15px 1px rgb(0, 0, 0, 0.1);
+  transition: background 0.3s;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+header p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.dark header {
+  background: var(--dark-blue);
+}
+
+@media screen and (max-width: 700px) {
+  header h2 {
+    font-size: 15px;
+  }
+  header p {
+    font-size: 14px;
+  }
+}
