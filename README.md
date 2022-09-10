@@ -12,7 +12,6 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 
 ### Built with
 
-- CSS custom properties
 - Flexbox
 - React
 - React Router
