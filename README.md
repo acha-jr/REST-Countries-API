@@ -6,7 +6,7 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 
 ![](./screenshot.jpg)
 
-- Live Site URL: https://obinna-restcountries.netlify.app
+### Live Site URL: https://obinna-restcountries.netlify.app
 
 ## My process
 
