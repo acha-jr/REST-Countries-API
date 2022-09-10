@@ -13,6 +13,11 @@ const Home = () => {
           <Countries />
         </FilterProvider>
       </SearchProvider>
+      <footer>
+        Challenge by{" "}
+        <a href='https://www.frontendmentor.io/'>Frontend Mentor</a>. Coded by{" "}
+        <a href='https://github.com/acha-jr'>acha-jr</a>.
+      </footer>
     </main>
   );
 };

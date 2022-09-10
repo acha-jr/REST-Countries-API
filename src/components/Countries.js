@@ -55,7 +55,7 @@ const Country = () => {
       {loading ? (
         <AiOutlineLoading3Quarters className='loading' />
       ) : (
-        filterRegion.map((props, index) => {
+        searchArray.map((props, index) => {
           const { flags, name, population, region, capital } = props;
           return (
             <div className='card' key={index}>
