@@ -18,10 +18,10 @@ const Country = () => {
   const [loading, setLoading] = useState(true);
 
   const fetchData = async () => {
-    const data = await fetch("https://restcountries.com/v3.1/all");
-    const countries = await data.json();
+    const res = await fetch("https://restcountries.com/v3.1/all");
+    const data = await res.json();
 
-    setCountry(countries);
+    setCountry(data);
     setLoading(false);
   };
 
@@ -32,7 +32,7 @@ const Country = () => {
   const { searchTerm } = useContext(SearchContext);
   const { filter } = useContext(FilterContext);
 
-  const searchArray = country.filter((val) => {
+  const searchArr = country.filter((val) => {
     if (!searchTerm) {
       return val;
     } else if (
@@ -42,7 +42,7 @@ const Country = () => {
     }
   });
 
-  const filterRegion = country.filter((val) => {
+  const filterArr = country.filter((val) => {
     if (filter === "All") {
       return val;
     } else if (val.region.toLowerCase().includes(filter.toLowerCase())) {
@@ -55,7 +55,7 @@ const Country = () => {
       {loading ? (
         <AiOutlineLoading3Quarters className='loading' />
       ) : (
-        searchArray.map((props, index) => {
+        (searchTerm ? searchArr : filterArr).map((props, index) => {
           const { flags, name, population, region, capital } = props;
           return (
             <div className='card' key={index}>

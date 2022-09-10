@@ -35,7 +35,7 @@ const Filter = () => {
     "All",
     "Africa",
     "Americas",
-    "Antartica",
+    "Antarctic",
     "Asia",
     "Europe",
     "Oceania",
@@ -46,7 +46,7 @@ const Filter = () => {
     setDropdown((prevState) => !prevState);
   };
 
-  const { filter, filterCountries } = useContext(FilterContext);
+  const { filterCountries } = useContext(FilterContext);
 
   return (
     <div className='select-box'>

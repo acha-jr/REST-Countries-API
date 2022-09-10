@@ -17,6 +17,7 @@ header p {
   font-size: 15px;
   cursor: pointer;
   text-transform: capitalize;
+  font-weight: 600;
 }
 .dark header {
   background: var(--dark-blue);
