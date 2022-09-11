@@ -50,12 +50,14 @@ const Country = () => {
     }
   });
 
+  let arr = searchTerm ? searchArr : filterArr;
+
   return (
     <>
       {loading ? (
         <AiOutlineLoading3Quarters className='loading' />
       ) : (
-        (searchTerm ? searchArr : filterArr).map((props, index) => {
+        arr.map((props, index) => {
           const { flags, name, population, region, capital } = props;
           return (
             <div className='card' key={index}>
@@ -79,6 +81,7 @@ const Country = () => {
           );
         })
       )}
+      {arr.length === 0 ? !loading && <h2>Country Not Found</h2> : null}
     </>
   );
 };
