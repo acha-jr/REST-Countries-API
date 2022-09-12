@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import "../components/Details.css";
 import { MdOutlineKeyboardBackspace as Back } from "react-icons/md";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const Details = () => {
   const param = useParams();
@@ -15,6 +15,10 @@ const Details = () => {
     const country = await data.json();
     setDetails(country);
   };
+
+  useEffect(() => {
+    details.forEach((e) => (document.title = e.name.common));
+  });
 
   // Did some kind of cheat here because the page wasn't re-rendering after clicking the border links
   const [url, setUrl] = useState("");

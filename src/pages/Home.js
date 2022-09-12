@@ -3,8 +3,13 @@ import "../components/Home.css";
 import MainTop from "../components/MainTop";
 import { SearchProvider } from "../SearchContext";
 import { FilterProvider } from "../FilterContext";
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "REST Countries API";
+  });
+
   return (
     <main>
       <SearchProvider>
